@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Fest: SYNTHESIS 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?college,fest') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sticky-nav li a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .sticky-nav li a:hover {
+            color: #4CAF50;
+            background-color: #f0f0f0;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #4CAF50;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .schedule-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .day {
+            background-color: #fafafa;
+            padding: 20px;
+            border-left: 5px solid #4CAF50;
+            border-radius: 5px;
+        }
+
+        .day h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .day ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .day li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .time {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .event-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 80px 20px;
+                height: 50vh;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .sticky-nav ul {
+                flex-wrap: wrap;
+            }
+
+            .sticky-nav li a {
+                padding: 12px 15px;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>SYNTHESIS 2025</h1>
+            <p>A fusion of talent, technology, and art.</p>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About SYNTHESIS</h2>
+            <p>
+                SYNTHESIS 2025 is our college's premier annual cultural and technical fest. It's a platform where creativity meets innovation, bringing together students from various disciplines to showcase their skills, compete, and celebrate. Get ready for a weekend filled with exhilarating competitions, captivating performances, and unforgettable moments. Join us as we synthesize ideas and create a legacy.
+            </p>
+        </section>
+
+        <section id="schedule">
+            <h2>Event Schedule 🗓️</h2>
+            <div class="schedule-container">
+                <div class="day">
+                    <h3>Day 1: Thursday, Oct 10</h3>
+                    <ul>
+                        <li><span class="time">10:00 AM - 11:30 AM:</span> Inauguration Ceremony</li>
+                        <li><span class="time">12:00 PM - 02:00 PM:</span> Robotics Challenge</li>
+                        <li><span class="time">02:30 PM - 04:00 PM:</span> Solo Dance Competition</li>
+                        <li><span class="time">05:00 PM onwards:</span> DJ Night</li>
+                    </ul>
+                </div>
+                <div class="day">
+                    <h3>Day 2: Friday, Oct 11</h3>
+                    <ul>
+                        <li><span class="time">10:00 AM - 12:00 PM:</span> Technical Paper Presentation</li>
+                        <li><span class="time">12:30 PM - 02:30 PM:</span> Hackathon Finale</li>
+                        <li><span class="time">03:00 PM - 05:00 PM:</span> Fashion Show</li>
+                        <li><span class="time">06:00 PM onwards:</span> Celebrity Concert</li>
+                    </ul>
+                </div>
+                <div class="day">
+                    <h3>Day 3: Saturday, Oct 12</h3>
+                    <ul>
+                        <li><span class="time">10:00 AM - 11:30 AM:</span> Group Singing Competition</li>
+                        <li><span class="time">12:00 PM - 02:00 PM:</span> E-Sports Tournament</li>
+                        <li><span class="time">02:30 PM - 04:00 PM:</span> Drama Skit Competition</li>
+                        <li><span class="time">05:00 PM onwards:</span> Prize Distribution & Valedictory Function</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="events">
+            <h2>Our Events ✨</h2>
+            <div class="event-cards">
+                <div class="card">
+                    <h3>Tech Events</h3>
+                    <p>Hackathons, coding competitions, robotics, and more.</p>
+                    <a href="#schedule">View Schedule</a>
+                </div>
+                <div class="card">
+                    <h3>Cultural Events</h3>
+                    <p>Dance, music, drama, and fashion shows.</p>
+                    <a href="#schedule">View Schedule</a>
+                </div>
+                <div class="card">
+                    <h3>Literary Events</h3>
+                    <p>Debates, quizzes, and creative writing contests.</p>
+                    <a href="#schedule">View Schedule</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>Contact Us: <a href="mailto:info@collegefest.edu">info@collegefest.edu</a></p>
+            <p>&copy; 2025 SYNTHESIS. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
